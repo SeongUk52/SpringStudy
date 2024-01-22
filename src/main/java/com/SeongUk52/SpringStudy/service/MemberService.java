@@ -2,14 +2,17 @@ package com.SeongUk52.SpringStudy.service;
 
 import com.SeongUk52.SpringStudy.domain.Member;
 import com.SeongUk52.SpringStudy.repository.MemberRepository;
-import com.SeongUk52.SpringStudy.repository.MemoryMemberRepository;
 import java.util.List;
 import java.util.Optional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
